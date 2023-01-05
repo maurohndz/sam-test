@@ -252,6 +252,10 @@ html {
 	.tabbed-content .item::before {
 		display: none;
 	}
+	.tabs .active {
+		background-color: #b0b4be;
+    	color: #414f6b;
+	}
 }
 
 .item_lol {
