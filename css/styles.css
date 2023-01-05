@@ -1,0 +1,360 @@
+html {
+    font-size: 10px;
+}
+
+.main_wrapper {
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    position: relative;
+}
+
+/* ************** */
+/* *** Header *** */
+.header {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* *** menu *** */
+.menu {
+    display: flex;
+    gap: 4rem;
+}
+.menu a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* ************ */
+/* *** Hero *** */
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ****************** */
+/* *** Sub Header *** */
+#subHeader {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0 13px;
+}
+.subHeader_wrapper {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.subHeader_wrapper .menu a {
+    color: #414f6b;
+}
+
+
+/* ********************* */
+/* *** Title Section *** */
+.title_section {
+    display: flex;
+    align-items: baseline;
+}
+.title_num {
+    font-family: 'Oswald', sans-serif;
+    color: #414f6b;
+    opacity: .5;
+    font-weight: 700;
+    font-size: 13.6rem;
+    line-height: 100%;
+}
+.title_text {
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    color: #414f6b;
+    margin-top: auto;
+    padding-bottom: 27px;
+    position: relative;
+}
+.title_text::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background-color: #414f6b;
+    opacity: .5;
+}
+
+/* *** Text *** */
+.text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    color: #000000;
+}
+
+
+/* *************** */
+/* *** History *** */
+#history {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    background-image: url('/assets/peak.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.history_main {
+    height: 100vh;
+    padding-top: 40px;
+}
+.history_text {
+    max-width: 849px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.history_slider {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: rgba(66, 80, 108, 0.8);
+    display: flex;
+}
+.splide__slide {
+    height: 160px;
+    padding: 10px;
+}
+.splide__slide img {
+    width: 100%;
+}
+.splide__pagination {
+    bottom: -1.5em;
+}
+
+
+/* ************** */
+/* **** Team **** */
+#team {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: column;
+}
+.team_main {
+    gap: 30px;
+    max-width: 900px;
+    padding: 10px 0 20px;
+    align-items: center;
+    background-color: #ffffff;
+    flex-flow: row;
+    align-items: center;
+}
+
+.team_tabs {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: inherit;
+    background-color: #414f6b;
+}
+input[name="tabs"],
+.tabs_content {
+    display: none;
+}
+.tabs_menu{
+    flex-flow: row;
+    margin: 0 auto;
+    gap: 10px;
+}
+.tabs_link label {
+    display: block;
+    color: #b0b4be;
+    background-color: #414f6b;
+    font-size: 2rem;
+    line-height: 90%;
+    font-weight: 700;
+    padding: 8px 15px;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+}
+input[id="mountain_1"]:checked ~ .tabs_menu label[for="mountain_1"],
+input[id="mountain_2"]:checked ~ .tabs_menu label[for="mountain_2"] {
+    background-color: #b0b4be;
+    color: #414f6b;
+}
+input[id="mountain_1"]:checked ~ .tabs_grid #tab_mountain_1,
+input[id="mountain_2"]:checked ~ .tabs_grid #tab_mountain_2 {
+    display: block;
+}
+.tabs_grid {
+    display: flex;
+    height: 100%;
+    background-image: url('/assets/schedule.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 75%;
+}
+.tabs_grid .main_wrapper {
+    margin: 0 auto;
+    padding: 70px 0 0 80px;
+}
+.tabs_content {
+    max-width: fit-content;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 35px 15px 35px 35px;
+}
+.tabs_content h3 {
+    font-size: 3.2rem;
+    line-height: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #414f6b;
+    margin-bottom: 20px;
+}
+.tabs_content table {
+    width: 100%;
+}
+.tabs_content td {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 100%;
+    height: 1.3em;
+    width: 10em;
+}
+
+
+/* ************** */
+/* *** Footer *** */
+footer {
+    width: 100%;
+    background-color: #414f6b;
+    padding: 15px;
+}
+.footer_wrapper {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer span {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    display: inline-block;
+    color: #63769d;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 1050px) {
+    /* *************** */
+    /* *** History *** */
+    #image_carousel {
+        width: 816px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    /* *************** */
+    /* *** History *** */
+    .history_text {
+        padding-left: 7%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* *************** */
+    /* *** History *** */
+    #image_carousel {
+        width: 597px;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    /* *************** */
+    /* *** History *** */
+    #image_carousel {
+        width: 533px;
+    }
+
+    /* ************** */
+    /* **** Team **** */
+    .team_main {
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .team_main_text {
+        padding-left: 10%;
+    }
+
+    .tabs_grid .main_wrapper {
+        padding: 30px 0 0 40px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* *************** */
+    /* *** History *** */
+    #image_carousel {
+        width: 250px;
+    }
+
+    /* ************** */
+    /* *** Footer *** */
+    .footer_image img {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    /* *** menu *** */
+    .menu {
+        gap: 2rem;
+    }
+
+
+    /* ****************** */
+    /* *** Sub Header *** */
+    .subHeader_image img {
+        width: 125px;
+    }
+
+
+    /* ************** */
+    /* **** Team **** */
+    .tabs_grid .main_wrapper {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ************** */
+    /* *** Footer *** */
+    .footer_wrapper {
+        flex-flow: column;
+        gap: 5px;
+    }
+}
