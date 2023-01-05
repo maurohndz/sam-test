@@ -75,16 +75,36 @@
 					<div id="image_carousel" class="splide">
 						<div class="splide__track">
 							<ul class="splide__list">
-								<li class="splide__slide"><img src="/assets/slide-1.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-2.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-1.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-2.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-1.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-2.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-1.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-2.png"></li>
-                <li class="splide__slide"><img src="/assets/slide-1.png"></li>
-								<li class="splide__slide"><img src="/assets/slide-2.png"></li>
+								<li class="splide__slide">
+									<img src="/assets/slide-1.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-2.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-1.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-2.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-1.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-2.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-1.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-2.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-1.png" />
+								</li>
+								<li class="splide__slide">
+									<img src="/assets/slide-2.png" />
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -108,92 +128,79 @@
 				</div>
 			</div>
 
-			<div class="team_tabs">
-				<input
-					type="radio"
-					name="tabs"
-					value="mountain_1"
-					id="mountain_1"
-					checked
-				/>
-				<input
-					type="radio"
-					name="tabs"
-					value="mountain_2"
-					id="mountain_2"
-				/>
+			<article class="tabbed-content">
+				<nav class="tabs">
+					<ul class="main_wrapper">
+						<li><a href="#tab1" class="active">Tab 1</a></li>
+						<li><a href="#tab2">Tab 2</a></li>
+					</ul>
+				</nav>
 
-				<ul class="main_wrapper tabs_menu">
-					<li class="tabs_link">
-						<label for="mountain_1">MOUNTAIN 1</label>
-					</li>
-					<li class="tabs_link">
-						<label for="mountain_2">MOUNTAIN 2</label>
-					</li>
-				</ul>
-
-				<div class="tabs_grid">
-					<div class="main_wrapper">
-						<div class="tabs_content" id="tab_mountain_1">
+				<section id="tab1" class="item active" data-title="Tab 1">
+					<div class="main_wrapper item-content">
+						<div class="item_lol">
 							<h3>schedule</h3>
 
-              <table>
-                <tr>
-                  <td>25 Nov 2016</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-                <tr>
-                  <td>28 Nov 2016</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>18 Dec 2016</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>7 Jan 2017</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-              </table>
-						</div>
-
-						<div class="tabs_content" id="tab_mountain_2">
-							<h3>schedule 2</h3>
-              
-              <table>
-                <tr>
-                  <td>25 Nov 2016</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-                <tr>
-                  <td>28 Nov 2016</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>18 Dec 2016</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>7 Jan 2017</td>
-                  <td>Vestibulum viverra</td>
-                </tr>
-              </table>
+							<table>
+								<tr>
+									<td>25 Nov 2016</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+								<tr>
+									<td>28 Nov 2016</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+								<tr>
+									<td></td>
+								</tr>
+								<tr>
+									<td>18 Dec 2016</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+								<tr>
+									<td></td>
+								</tr>
+								<tr>
+									<td>7 Jan 2017</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+							</table>
 						</div>
 					</div>
-				</div>
-			</div>
+				</section>
+				<section id="tab2" class="item" data-title="Tab 2">
+					<div class="main_wrapper item-content">
+						<div class="item_lol">
+							<h3>schedule 2</h3>
+
+							<table>
+								<tr>
+									<td>25 Nov 2016</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+								<tr>
+									<td>28 Nov 2016</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+								<tr>
+									<td></td>
+								</tr>
+								<tr>
+									<td>18 Dec 2016</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+								<tr>
+									<td></td>
+								</tr>
+								<tr>
+									<td>7 Jan 2017</td>
+									<td>Vestibulum viverra</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+			</article>
 		</section>
 
 		<footer>
@@ -206,7 +213,13 @@
 			</div>
 		</footer>
 
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
 		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 		<script src="./js/slider.js"></script>
+		<script src="./js/test.js"></script>
 	</body>
 </html>
