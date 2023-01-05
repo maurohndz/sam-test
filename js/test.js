@@ -9,7 +9,7 @@ $(window).on("resize", function (e) {
 });
 
 function tabControl() {
-	var tabs = $(".tabbed-content").find(".tabs");
+	var tabs = $(".tabbed_content").find(".tabs");
 
 	if (tabs.is(":visible")) {
 		tabs.find("a").on("click", function (event) {
@@ -18,7 +18,7 @@ function tabControl() {
 			var target = $(this).attr("href"),
 				tabs = $(this).parents(".tabs"),
 				buttons = tabs.find("a"),
-				item = tabs.parents(".tabbed-content").find(".item");
+				item = tabs.parents(".tabbed_content").find(".item");
 
 			buttons.removeClass("active");
 			item.removeClass("active");
@@ -28,7 +28,7 @@ function tabControl() {
 		});
 	} else {
 		$(".item").on("click", function () {
-			var container = $(this).parents(".tabbed-content"),
+			var container = $(this).parents(".tabbed_content"),
 				currId = $(this).attr("id"),
 				items = container.find(".item");
 

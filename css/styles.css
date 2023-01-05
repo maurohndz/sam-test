@@ -167,14 +167,14 @@ html {
 	align-items: center;
 }
 
-.tabbed-content {
+.tabbed_content {
 	height: 100%;
 	background-image: url("/assets/schedule.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center 75%;
 }
-.tabbed-content .tabs {
+.tabbed_content .tabs {
 	display: none;
 	background-color: #414f6b;
 }
@@ -193,12 +193,14 @@ html {
 	font-family: "Oswald", sans-serif;
 	cursor: pointer;
 	text-decoration: none;
+	text-transform: uppercase;
 }
-.tabbed-content .item {
+.tabbed_content .item {
 	min-height: 2em;
 }
-.tabbed-content .item::before {
+.tabbed_content .item::before {
 	content: attr(data-title);
+	text-transform: uppercase;
 }
 .item::before {
 	cursor: pointer;
@@ -217,7 +219,7 @@ html {
 	background: #414f6b;
 	color: #eee;
 }
-.item.active .item-content {
+.item.active .item_content {
 	padding: 1em;
 	-webkit-transition: opacity 0.3s ease-in-out;
 	-moz-transition: opacity 0.3s ease-in-out;
@@ -225,47 +227,57 @@ html {
 	-ms-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 }
-.tabbed-content .item .item-content {
+.tabbed_content .item .item_content {
 	opacity: 0;
 	visibility: hidden;
 	height: 0;
 }
-.tabbed-content .item.active .item-content {
+.tabbed_content .item.active .item_content {
 	opacity: 1;
 	visibility: visible;
 	height: auto;
 }
 
 @media all and (min-width: 800px) {
-	.tabbed-content .tabs {
+	.tabbed_content .tabs {
 		display: block;
 	}
-	.tabbed-content .tabs li {
+	.tabbed_content .tabs li {
 		display: inline-block;
 	}
-	.tabbed-content .tabs li a {
+	.tabbed_content .tabs li a {
 		display: block;
 	}
-	.tabbed-content .item {
+	.tabbed_content .item {
 		min-height: 0;
 	}
-	.tabbed-content .item::before {
+	.tabbed_content .item::before {
 		display: none;
 	}
 	.tabs .active {
 		background-color: #b0b4be;
     	color: #414f6b;
+		position: relative;
+	}
+	.tabs .active::after {
+		content: '';
+		width: calc(100% - 30px);
+		height: 1px;
+		background-color: #414f6b;
+		position: absolute;
+		left: 15px;
+		top: 28px;
 	}
 }
 
-.item_lol {
+.item_wrapper {
 	flex-flow: column;
 	max-width: fit-content;
 	background-color: rgba(255, 255, 255, 0.7);
 	padding: 35px 15px 35px 35px;
 	margin: 60px 0 0 70px;
 }
-.item_lol h3 {
+.item_wrapper h3 {
 	font-size: 3.2rem;
 	line-height: 100%;
 	font-weight: 700;
@@ -274,10 +286,10 @@ html {
 	color: #414f6b;
 	margin-bottom: 20px;
 }
-.item_lol table {
+.item_wrapper table {
 	width: 100%;
 }
-.item_lol td {
+.item_wrapper td {
 	font-size: 1.2rem;
 	font-family: "Lato", sans-serif;
 	font-weight: 300;
@@ -339,7 +351,7 @@ footer span {
 	#team {
 		height: min-content;
 	}
-    .item_lol {
+    .item_wrapper {
         margin: 20px;
     }
 }
@@ -386,7 +398,7 @@ footer span {
 
     /* ************** */
 	/* **** Team **** */
-    .item_lol {
+    .item_wrapper {
         margin: 20px 0;
     }
 
